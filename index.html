@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/calc-ico.svg" type="image/x-icon">
+    <script type="module" src="./modules/calculator.js"></script>
+</head>
+<body>
+    <form class="calculator">
+        <li class="history"></li>
+        <input type="text" id="display" disabled>
+        <fieldset class="numbers">
+            <input type="button" class="number" value="7">
+            <input type="button" class="number" value="8">
+            <input type="button" class="number" value="9">
+            <input type="button" class="number" value="4">
+            <input type="button" class="number" value="5">
+            <input type="button" class="number" value="6">
+            <input type="button" class="number" value="1">
+            <input type="button" class="number" value="2">
+            <input type="button" class="number" value="3">
+            <input type="button" class="number" value="0">
+            <input type="button" class="number" value=".">
+            <input type="submit" class="operator" value="=">
+        </fieldset>
+        <fieldset class="operators">
+             <input type="button" class="operator" value="/">
+            <input type="button" class="operator" value="*">
+            <input type="button" class="operator" value="+">
+            <input type="button" class="operator" value="-">
+            <input type="button" class="operator" value="%">
+            <input type="button" class="operator" value="mod">
+            <input type="button" class="operator" value="√">
+        </fieldset>
+        <fieldset class="misc">
+            <input type="button" class="misc" value="C">
+            <input type="button" class="misc" value="←">
+            <input type="button" class="misc" value="(">
+            <input type="button" class="misc" value=")">
+        </fieldset>
+    </form>
+</body>
+</html>
