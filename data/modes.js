@@ -5,14 +5,14 @@ const modesData = [
         {
           tagName: 'input',
           values: [0,1,2,3,4,5,6,7,8,9],
-          className: 'digits',
+          className: 'digit',
           action: 'digit',
           type: 'button',
         },
         {
           tagName: 'input',
           values: ['+','-','*','/','=','mod','%'],
-          className: 'operators',
+          className: 'operator',
           action: 'operator',
           type: 'button',
         },
