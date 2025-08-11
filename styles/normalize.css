@@ -151,3 +151,6 @@ template {
 [hidden] {
   display: none;
 }
+ul, fieldset, form {
+    padding: 0;
+}

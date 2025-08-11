@@ -1,2 +1,64 @@
 @import '../styles/normalize.css';
 @import '../styles/standard.css';
+
+body {
+    padding: 5dvw;
+    background-color: rgba(223, 221, 221, 0.712);
+}
+h1 {
+    margin: 0 auto;
+    width: 20dvw;
+    text-align: center;
+    text-transform: capitalize;
+}
+.calculator {
+    width: 25dvw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0.5dvw;
+    gap: 0.5dvw;
+    border: 1px solid black;
+    border-radius: 1dvh;
+    background-color: rgba(68, 68, 68, 0.17);
+    box-shadow: 3px -3px 5px rgba(9, 9, 9, 0.7);
+}
+.display {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 0 0.5dvw 0 0;
+    border-radius: 0.5dvw;
+    font-size: 2dvw;
+    background-color: rgb(238, 238, 238);
+    text-align: right;
+}
+.history {
+    height: 15dvh;
+    border: 0.5px solid black;
+    border-radius: 1dvw;
+}
+.togglers {
+    display: flex;
+    border-radius: 1dvw ;
+    justify-content: space-around;
+    padding: 0 0 0.5dvw 0;
+    & input {
+        display: none;
+    }
+}
+.togglers label {
+    padding: 0 0.5dvw 0 0.5dvw;
+    text-shadow: 1px 1px 1px transparent;
+    color:rgba(144, 144, 144, 0.7)
+}
+.togglers [type='radio']:checked+label {
+    color: rgba(9, 9, 9, 0.7);
+    text-shadow: 0px 0px 3px black;
+    transition: all 0.5s linear;
+}
+legend {
+    text-align:center;
+    font-size: small;
+    text-transform: capitalize;
+}

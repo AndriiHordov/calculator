@@ -4,14 +4,14 @@ const modesData = [
       controlsSet: [
         {
           tagName: 'input',
-          values: [0,1,2,3,4,5,6,7,8,9],
+          values: [7,8,9,4,5,6,1,2,3,0,'.'],
           className: 'digit',
           action: 'digit',
           type: 'button',
         },
         {
           tagName: 'input',
-          values: ['+','-','*','/','=','mod','%'],
+          values: ['(', ')','CE','+','-','C','*','/','mod','=','%', '√'],
           className: 'operator',
           action: 'operator',
           type: 'button',

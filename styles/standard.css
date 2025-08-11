@@ -1,0 +1,23 @@
+.digits, .operators {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5dvw 0.5dvw;
+}
+.digit input, .operator input {
+    padding: 0;
+    width: 3.5dvw;
+    height: 3.5dvw;
+    border-radius: 0.5dvw;
+    text-align: center;
+    font-size: 1.5dvw;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px rgba(16, 0, 0, 0.616);
+    background-color: rgba(188, 183, 183, 0.373);
+}
+
+.standard {
+    border-radius: 1dvh;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
