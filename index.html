@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/calculator.css">
+    <link rel="shortcut icon" href="./assets/calc-ico.svg" type="image/x-icon">
+    <script type="module" src="./modules/calculator.js"></script>
+</head>
+<body>
+    <h1>calculator</h1>
+    <form class="calculator">
+        <ul class="history" id="history"></ul>
+        <input type="text" class="display" id="display" value="0" disabled>
+        <fieldset class="togglers">
+            <legend>operational mode</legend>
+            <input type="radio" name="mode" id="standard" checked>
+            <label for="standard">standard</label>
+            <input type="radio" name="mode" id="math">
+            <label for="math">math</label>
+            <input type="radio" name="mode" id="engineering">
+            <label for="engineering">engineering</label>
+        </fieldset>
+    </form>
+</body>
+</html>
