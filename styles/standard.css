@@ -15,6 +15,11 @@
     background-color: rgba(188, 183, 183, 0.373);
 }
 
+.digit input[value=""] {
+    pointer-events: none;
+    background-color: rgba(16, 0, 0, 0.316);
+}
+
 .standard {
     border-radius: 1dvh;
     display: flex;
