@@ -6,14 +6,14 @@ const modesData = [
           tagName: 'input',
           values: [7,8,9,4,5,6,1,2,3,0,'.', ''],
           className: 'digit',
-          action: 'digit',
+          action: [7,8,9,4,5,6,1,2,3,0,'.', null],
           type: 'button',
         },
         {
           tagName: 'input',
           values: ['(', ')','CE','+','-','C','x','/','mod','=','%', '√'],
           className: 'operator',
-          action: 'operator',
+          action: ['openParenthese', 'closeParenthese', 'clearDisplay', 'add', 'sub', 'mul', 'div', 'mod', 'equal', 'percent', 'sqrt'],
           type: 'button',
         },
       ]
