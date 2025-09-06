@@ -11,11 +11,11 @@ const [standard, math, engineer] = modesData.map(({ modeName, controlsSet }) => 
       className, 
       action, 
       type } = set;
-    const controls = values.map((value) => {
+    const controls = values.map((value, index) => {
       const padItem = document.createElement('li');
       const control = document.createElement(tagName);
       padItem.className = className;
-      control.dataset.action = action;
+      control.dataset.action = action[index];
       control.type = type;
       control.value = value;
       control.ariaLabel = value;

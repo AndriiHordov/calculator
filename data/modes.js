@@ -13,7 +13,7 @@ const modesData = [
           tagName: 'input',
           values: ['(', ')','CE','+','-','C','x','/','mod','=','%', '√'],
           className: 'operator',
-          action: ['openParenthese', 'closeParenthese', 'clearDisplay', 'add', 'sub', 'mul', 'div', 'mod', 'equal', 'percent', 'sqrt'],
+          action: ['openParenthese', 'closeParenthese', 'clearDisplay', 'add', 'sub', 'clearLast', 'mul', 'div', 'mod', 'equal', 'percent', 'sqrt'],
           type: 'button',
         },
       ]

@@ -33,10 +33,17 @@ h1 {
     background-color: rgb(238, 238, 238);
     text-align: right;
 }
+.display::placeholder {
+    content: '0';
+    color: black;
+}
 .history {
     height: 15dvh;
     border: 0.5px solid black;
     border-radius: 1dvw;
+    overflow-y: scroll;
+    padding: 1dvw;
+    font-size: 1.9dvw;
 }
 .togglers {
     display: flex;
@@ -50,7 +57,8 @@ h1 {
 .togglers label {
     padding: 0 0.5dvw 0 0.5dvw;
     text-shadow: 1px 1px 1px transparent;
-    color:rgba(144, 144, 144, 0.7)
+    color:rgba(144, 144, 144, 0.7);
+    font-size: 1.9dvw;
 }
 .togglers [type='radio']:checked+label {
     color: rgba(9, 9, 9, 0.7);
@@ -61,4 +69,5 @@ legend {
     text-align:center;
     font-size: small;
     text-transform: capitalize;
+    font-size: 1.9dvw;
 }
