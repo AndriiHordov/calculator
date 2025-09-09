@@ -1,4 +1,5 @@
 import { operatorDescriptors } from "../../data/operators.js";
+import { parseOperand } from "./utils.js";
 
 const { operatorsPrecedence, aliases } = operatorDescriptors;
 const parser = (string) => {

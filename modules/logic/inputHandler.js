@@ -1,4 +1,4 @@
-import calculator  from "./calculator.js";
+import { calculator }  from "./calculator.js";
 
 const history = document.getElementById('history');
 const historyItem = document.createElement('li');
