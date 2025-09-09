@@ -44,7 +44,11 @@ const safeOperation = (op, obj, ...args) => {
 
     return result;
   } catch (e) {
-    return { error: e.message };
+    return { error: e.message,
+        toString() {
+            return this.error;
+        }
+     };
   }
 }
 
