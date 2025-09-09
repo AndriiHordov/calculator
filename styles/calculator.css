@@ -71,3 +71,6 @@ legend {
     text-transform: capitalize;
     font-size: 1.9dvw;
 }
+.tooltip {
+    cursor: pointer;
+}
