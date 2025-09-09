@@ -15,7 +15,6 @@ const parser = (string) => {
     .match(/(\d+[.]?\d?)+?|[a-zA-Z@]{5}/g)
     .map((token, i, arr) => /[a-z]/g.test(arr[i-1]) && token === 'sub@@' ? 'neg@@' : token)
     .map((token) => token.replace(/[@]/g, ''));
-    console.log(rawTokens)
   len = rawTokens.length;
   for(let i = 0; i < len; i++) {
     if(rawTokens[i] === 'neg') {

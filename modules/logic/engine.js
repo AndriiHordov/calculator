@@ -2,7 +2,7 @@ import parser from "./parser.js";
 import { operatorDescriptors } from "../../data/operators.js";
 import { calculator } from "./calculator.js";
 
-const { binaryOperators } = operatorDescriptors
+const { binaryOperators } = operatorDescriptors;
 export function calculatorEngine(input) {
   const queue = parser(input);
   const stack = [];
