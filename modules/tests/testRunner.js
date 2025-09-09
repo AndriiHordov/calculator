@@ -1,5 +1,7 @@
 export function expect(actual, expected, message, duration) {
-  if (Object.is(actual, expected)) {
+  let string;
+  if (typeof actual === "object") string = actual.toString();
+  if (Object.is(string ?? actual, expected)) {
     console.log(`✅ ${message} (${duration.toFixed(3)} ms)`);
     return true;
   } else {
