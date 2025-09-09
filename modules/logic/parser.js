@@ -1,5 +1,5 @@
 import { operatorDescriptors } from "../../data/operators.js";
-import { parseOperand } from "./utils.js";
+import { parseOperand, createRegExpBundle } from "./utils.js";
 
 const { operatorsPrecedence, aliases } = operatorDescriptors;
 const parser = (string) => {
@@ -10,11 +10,12 @@ const parser = (string) => {
   let count = 0;
   const cleanString = string.replace(/\s/g,'');
   const rawTokens = cleanString
-    .replace(/[+-x/()√]/g, (c) => aliases[c] ?? c)
-    .replace(/^sub@@|(?<=add@@|sub@@|mul@@|div@@)sub@@(\d+)/g,'neg@@ $1')
+    .replace(createRegExpBundle(Object.keys(aliases)), (c) => aliases[c] ?? c)
+    .replace(/^sub@@|(?<=add@@|sub@@|mul@@|div@@|sqrt@|rem@@)sub@@(\d+)/g,'neg@@ $1')
     .match(/(\d+[.]?\d?)+?|[a-zA-Z@]{5}/g)
     .map((token, i, arr) => /[a-z]/g.test(arr[i-1]) && token === 'sub@@' ? 'neg@@' : token)
     .map((token) => token.replace(/[@]/g, ''));
+    console.log(rawTokens)
   len = rawTokens.length;
   for(let i = 0; i < len; i++) {
     if(rawTokens[i] === 'neg') {

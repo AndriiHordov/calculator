@@ -1,4 +1,4 @@
-import { calculator }  from "./calculator.js";
+import { calculatorEngine } from "./engine.js";
 
 const history = document.getElementById('history');
 const historyItem = document.createElement('li');
@@ -9,7 +9,7 @@ function inputHandler(e) {
   const target = e.target;
   switch(target.dataset.action) {
     case 'equal': {
-      display.value = calculator(display.value) ?? '';
+      display.value = calculatorEngine(display.value) ?? '';
       break;
     }
     case 'clearDisplay': {

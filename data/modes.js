@@ -11,7 +11,7 @@ const modesData = [
         },
         {
           tagName: 'input',
-          values: ['(', ')','CE','+','-','C','x','/','mod','=','%', '√'],
+          values: ['(', ')','CE','+','-','C','x','/','rem','=','%', '√'],
           className: 'operator',
           action: ['openParenthese', 'closeParenthese', 'clearDisplay', 'add', 'sub', 'clearLast', 'mul', 'div', 'mod', 'equal', 'percent', 'sqrt'],
           type: 'button',
