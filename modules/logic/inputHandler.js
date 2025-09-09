@@ -9,7 +9,15 @@ function inputHandler(e) {
   const target = e.target;
   switch(target.dataset.action) {
     case 'equal': {
-      display.value = calculatorEngine(display.value) ?? '';
+      const result = calculatorEngine(display.value) ?? '';
+      if(typeof result === 'object') {
+        display.value = 'Error';
+        display.title = result.error;
+        display.classList.add('tooltip');
+      } else {
+        display.value = result;
+        display.classList.remove('tooltip');
+      }
       break;
     }
     case 'clearDisplay': {
@@ -28,46 +36,7 @@ function inputHandler(e) {
         display.value += /\d+/.test(display.value) ? target.value : `0${target.value}`;
       }
     }
-  }
-  
-// switch(target.parentElement.className) {
-  //   case 'digit': {
-  //     if(!resultFlag) {
-  //       display.value += target.value;
-  //     } else {
-  //       display.value = '';
-  //       resultFlag = false;
-  //       display.value += target.value;
-  //     }
-  //     break;
-  //   }
-  //   case 'operator': {
-  //     const [newHistoryItem, newHistoryOperator] = [0,1].map(el => historyItem.cloneNode());
-  //     let result = '';
-  //     if(!buffer.length) {
-
-  //       buffer.operand1 = display.value;
-  //       buffer.operand2 = target.value;
-  //       newHistoryItem.textContent = display.value;
-  //       newHistoryOperator.textContent = target.value;
-  //     } else {
-  //       buffer.operand1 = display.value;
-  //       result = binary(buffer);
-  //       buffer.length = 0;
-  //       buffer.push(result, target.value);
-  //       newHistoryItem.textContent = result;
-  //       newHistoryOperator.textContent = target.value;
-  //       resultFlag = true;
-  //     }
-  //     history.append(newHistoryItem, newHistoryOperator);
-  //     display.value = result;
-  //   }
-  //   default: {
-  //     return null;
-  //   }
-        
-  //   }
-    
+  }  
 }
 
 export default inputHandler;
