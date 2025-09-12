@@ -11,10 +11,10 @@ const parser = (string) => {
   const cleanString = string.replace(/\s/g,'');
   const rawTokens = cleanString
     .replace(createRegExpBundle(Object.keys(aliases)), (c) => aliases[c] ?? c)
-    .replace(/^sub@@|(?<=add@@|sub@@|mul@@|div@@|sqrt@|rem@@)sub@@(\d+)/g,'neg@@ $1')
-    .match(/(\d+[.]?\d?)+?|[a-zA-Z@]{5}/g)
-    .map((token, i, arr) => /[a-z]/g.test(arr[i-1]) && token === 'sub@@' ? 'neg@@' : token)
-    .map((token) => token.replace(/[@]/g, ''));
+    .replace(/^(?<=[a-zA-Z]+?@)sub@(\d+)/g,'neg@ $1')
+    .match(/(\d+[.]?\d?)+?|[a-zA-Z]+@/g)
+    .map((token, i, arr) => /[a-z]/g.test(arr[i-1]) && token === 'sub@' ? 'neg@' : token)
+    .map((token) => token.replace(/@/g, ''));
   len = rawTokens.length;
   for(let i = 0; i < len; i++) {
     if(rawTokens[i] === 'neg') {

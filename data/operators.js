@@ -22,15 +22,15 @@ export const operatorDescriptors = {
     sqrt: (a) => Math.sqrt(a),
   },
   aliases: {
-    '+': 'add@@',
-    '-': 'sub@@',
-    'x': 'mul@@',
-    '/': 'div@@',
+    '+': 'add@',
+    '-': 'sub@',
+    '×': 'mul@',
+    '/': 'div@',
     '√': 'sqrt@',
-    '(': 'oPars',
-    ')': 'cPars',
-    '%': 'per@@',
-    'rem': 'rem@@',
+    '(': 'oPars@',
+    ')': 'cPars@',
+    '%': 'per@',
+    'rem': 'rem@',
     }
 }
 

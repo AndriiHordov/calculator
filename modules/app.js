@@ -4,5 +4,6 @@ import { run } from "./tests/calculate.test.js";
 
 const userInterface = document.getElementsByClassName('calculator')[0];
 userInterface.append(standard);
-userInterface.addEventListener('click', (e) => inputHandler(e));
+userInterface.addEventListener('click', inputHandler);
+document.addEventListener('keydown', inputHandler);
 run();
